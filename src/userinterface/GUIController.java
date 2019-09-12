@@ -2,7 +2,9 @@ package userinterface;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import threads.AnimationThread;
 
 public class GUIController {
 
@@ -112,6 +114,11 @@ public class GUIController {
     private ImageView imv41;
 
     @FXML
+    private ImageView imvRandomBlocks;
+    
+    private int currentBlock;
+    
+    @FXML
     void add(ActionEvent event) {
 
     }
@@ -123,7 +130,11 @@ public class GUIController {
 
     @FXML
     void generateBlock(ActionEvent event) {
-
+    	
+    	AnimationThread aT = new AnimationThread(this);
+    	aT.setDaemon(true);
+    	aT.start(); 
+    	
     }
 
     @FXML
@@ -134,6 +145,14 @@ public class GUIController {
     @FXML
     void reestart(ActionEvent event) {
 
+    }
+    
+    public void setImageRandom(String id) {
+    	imvRandomBlocks.setImage(new Image(id));
+    }
+    
+    public void setCurrentBlock(int currentBlockx) {
+    	currentBlock = currentBlockx;
     }
 
 }
