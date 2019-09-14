@@ -1,9 +1,12 @@
 package model;
 
+import myCollections.StackL;
+
 public class Inventary {
 	
 	private String currentBlock;
 	private int currentAmount;
+	private StackL<Integer> a;
 	
 	public Inventary() {
 		
