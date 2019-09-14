@@ -1,18 +1,21 @@
 package threads;
 
+import model.Inventary;
 import userinterface.GUIController;
 
 public class AnimationThread extends Thread{
 	
 	private GUIController gui;
+	private Inventary inventary;
 	
-	public AnimationThread(GUIController guix) {
-		gui = guix;
+	public AnimationThread(GUIController gui, Inventary inventary) {
+		this.gui = gui;
+		this.inventary = inventary;
 	}
 	
 	@Override 
 	public void run() {
-	   
+	   	
 		int cont = 1;
 		while(cont<=15) {
 			String id = "/images/block"+cont+".png";
@@ -28,10 +31,8 @@ public class AnimationThread extends Thread{
 			}
 			cont++;	
 		}
-		
-		int currentBlock = (int)(Math.random()*15)+1;
-		gui.setImageRandom("/images/block"+currentBlock+".png");
-		gui.setCurrentBlock(currentBlock);
+	
+		gui.setImageRandom("/images/"+inventary.getCurrentBlock()+".png");
 		
 	}
 

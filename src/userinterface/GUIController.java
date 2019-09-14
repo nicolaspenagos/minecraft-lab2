@@ -2,8 +2,10 @@ package userinterface;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import model.Inventary;
 import threads.AnimationThread;
 
 public class GUIController {
@@ -116,11 +118,19 @@ public class GUIController {
     @FXML
     private ImageView imvRandomBlocks;
     
-    private int currentBlock;
+    @FXML
+    private Label amount;
+   
+    private Inventary inventary;
+    
+    @FXML
+    public void initialize() {
+    	inventary = new Inventary();
+    }
     
     @FXML
     void add(ActionEvent event) {
-
+    	
     }
 
     @FXML
@@ -131,28 +141,40 @@ public class GUIController {
     @FXML
     void generateBlock(ActionEvent event) {
     	
-    	AnimationThread aT = new AnimationThread(this);
+    	inventary.generateRandomBlock();
+    	AnimationThread aT = new AnimationThread(this, inventary);
     	aT.setDaemon(true);
     	aT.start(); 
     	
+    	
+    }
+    
+    @FXML
+    void generateAmount(ActionEvent event) {
+    	amount.setText(inventary.getCurrentAmount()+"");
     }
 
     @FXML
     void next(ActionEvent event) {
-
+    	
     }
 
     @FXML
     void reestart(ActionEvent event) {
+    	
+    }
+    
+    public void setImageRandom(String id) {;
+    	imvRandomBlocks.setImage(new Image(id));
+    	setLabelAmount();
+    }
+    
+    public void setLabelAmount() {
 
     }
+
+
     
-    public void setImageRandom(String id) {
-    	imvRandomBlocks.setImage(new Image(id));
-    }
-    
-    public void setCurrentBlock(int currentBlockx) {
-    	currentBlock = currentBlockx;
-    }
+  //  public void 
 
 }
