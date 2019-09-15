@@ -229,5 +229,10 @@
             <Image url="@../images/Mine-02.png" />
          </image>
       </ImageView>
+      <Label fx:id="lb0" layoutX="297.0" layoutY="368.0" text="a" textFill="WHITE" />
+      <Label fx:id="lb1" layoutX="334.0" layoutY="366.0" text="a" textFill="WHITE" />
+      <Label fx:id="lb2" layoutX="377.0" layoutY="367.0" text="a" textFill="WHITE" />
+      <Label fx:id="lb3" layoutX="412.0" layoutY="366.0" text="a" textFill="WHITE" />
+      <Label fx:id="lb4" layoutX="454.0" layoutY="366.0" text="a" textFill="WHITE" />
    </children>
 </Pane>

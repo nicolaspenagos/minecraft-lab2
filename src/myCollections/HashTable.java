@@ -46,6 +46,16 @@ public class HashTable implements HashTableI {
 	public Cube[] getTable() {
 		return table;
 	}
+	
+	public int getCubesLength(int x) {
+		int amount = 0;
+		Cube current = table[x];
+		while( current != null) {
+			amount++;
+			current = current.getNext();
+		}
+		return amount;
+	}
 
 
 }
