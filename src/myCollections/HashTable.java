@@ -43,7 +43,9 @@ public class HashTable implements HashTableI {
 		return Integer.parseInt(parts[1]);
 	}
 
-
+	public Cube[] getTable() {
+		return table;
+	}
 
 
 }

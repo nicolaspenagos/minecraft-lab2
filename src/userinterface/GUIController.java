@@ -6,7 +6,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import model.Cube;
 import model.Inventary;
+import myCollections.HashTable;
 import threads.AnimationThread;
 
 public class GUIController {
@@ -26,6 +28,39 @@ public class GUIController {
     
     @FXML
     private Button generateAmountButton;
+
+    @FXML
+    private ImageView imv0;
+
+    @FXML
+    private ImageView imv1;
+
+    @FXML
+    private ImageView imv2;
+
+    @FXML
+    private ImageView imv3;
+
+    @FXML
+    private ImageView imv4;
+
+    @FXML
+    private ImageView imv5;
+
+    @FXML
+    private ImageView imv6;
+
+    @FXML
+    private ImageView imv7;
+
+    @FXML
+    private ImageView imv8;
+
+    @FXML
+    private ImageView imv9;
+
+    @FXML
+    private ImageView imv10;
 
     @FXML
     private ImageView imv11;
@@ -55,61 +90,28 @@ public class GUIController {
     private ImageView imv19;
 
     @FXML
-    private ImageView imv29;
-
-    @FXML
-    private ImageView imv28;
-
-    @FXML
-    private ImageView imv27;
-
-    @FXML
-    private ImageView imv26;
-
-    @FXML
-    private ImageView imv25;
-
-    @FXML
-    private ImageView imv24;
-
-    @FXML
-    private ImageView imv22;
+    private ImageView imv20;
 
     @FXML
     private ImageView imv21;
 
     @FXML
-    private ImageView imv31;
+    private ImageView imv22;
 
     @FXML
-    private ImageView imv32;
+    private ImageView imv23;
 
     @FXML
-    private ImageView imv33;
+    private ImageView imv24;
 
     @FXML
-    private ImageView imv34;
+    private ImageView imv25;
 
     @FXML
-    private ImageView imv35;
+    private ImageView imv26;
 
     @FXML
-    private ImageView imv36;
-
-    @FXML
-    private ImageView imv37;
-
-    @FXML
-    private ImageView imv38;
-
-    @FXML
-    private ImageView imv39;
-
-    @FXML
-    private ImageView imv49;
-
-    @FXML
-    private ImageView imv48;
+    private ImageView imv27;
 
     @FXML
     private ImageView imv47;
@@ -154,6 +156,9 @@ public class GUIController {
     private Inventary inventary;
     
     private char mode;
+    
+    private String currentPath = "";
+    
         
     @FXML
     public void initialize() {
@@ -173,11 +178,87 @@ public class GUIController {
     
     @FXML
     void add(ActionEvent event) {
+    	if(mode == INVENTORY) {
+    
+    		String[] parts = currentPath.split("/");
+    		
+    		String line = parts[2];
+    		String msg = "";
+    		int i = 0;
+    		while(line.charAt(i)!='.') {
+    			msg+=line.charAt(i);
+    			i++;
+    		}
+    	
+    		System.out.println(msg);
+    	    Cube c = new Cube(currentPath, msg);
+    	    System.out.println(inventary.getTable().add(c));
+    	    HashTable ht = inventary.getTable();
+    	    
+    	    if(ht.getTable()[0]!=null)
+    	    	imv0.setImage(new Image(ht.getTable()[0].getPath()));
+    	    if(ht.getTable()[1]!=null)
+    	    	imv1.setImage(new Image(ht.getTable()[1].getPath()));
+    	    if(ht.getTable()[2]!=null)
+    	    	imv2.setImage(new Image(ht.getTable()[2].getPath()));
+    	    if(ht.getTable()[3]!=null)
+    	    	imv3.setImage(new Image(ht.getTable()[3].getPath()));
+    	    if(ht.getTable()[4]!=null)
+    	    	imv4.setImage(new Image(ht.getTable()[4].getPath()));
+    	    if(ht.getTable()[5]!=null)
+    	    	imv5.setImage(new Image(ht.getTable()[5].getPath()));
+    	    if(ht.getTable()[6]!=null)
+    	    	imv6.setImage(new Image(ht.getTable()[6].getPath()));
+    	    if(ht.getTable()[7]!=null)
+    	    	imv7.setImage(new Image(ht.getTable()[7].getPath()));
+    	    if(ht.getTable()[8]!=null)
+    	    	imv8.setImage(new Image(ht.getTable()[8].getPath()));
+    	    if(ht.getTable()[9]!=null)
+    	    	imv9.setImage(new Image(ht.getTable()[9].getPath()));
+    	    if(ht.getTable()[10]!=null)
+    	    	imv10.setImage(new Image(ht.getTable()[10].getPath()));
+    	    if(ht.getTable()[11]!=null)
+    	    	imv11.setImage(new Image(ht.getTable()[11].getPath()));
+    	    if(ht.getTable()[12]!=null)
+    	    	imv12.setImage(new Image(ht.getTable()[12].getPath()));
+    	    if(ht.getTable()[13]!=null)
+    	    	imv13.setImage(new Image(ht.getTable()[13].getPath()));
+    	    if(ht.getTable()[14]!=null)
+    	    	imv14.setImage(new Image(ht.getTable()[14].getPath()));
+    	    if(ht.getTable()[15]!=null)
+    	    	imv15.setImage(new Image(ht.getTable()[15].getPath()));
+    	    if(ht.getTable()[16]!=null)
+    	    	imv16.setImage(new Image(ht.getTable()[16].getPath()));
+    	    if(ht.getTable()[17]!=null)
+    	    	imv17.setImage(new Image(ht.getTable()[17].getPath()));
+    	    if(ht.getTable()[18]!=null)
+    	    	imv18.setImage(new Image(ht.getTable()[18].getPath()));
+    	    if(ht.getTable()[19]!=null)
+    	    	imv19.setImage(new Image(ht.getTable()[19].getPath()));
+    	    if(ht.getTable()[20]!=null)
+    	    	imv20.setImage(new Image(ht.getTable()[20].getPath()));
+    	    if(ht.getTable()[21]!=null)
+    	    	imv21.setImage(new Image(ht.getTable()[21].getPath()));
+    	    if(ht.getTable()[22]!=null)
+    	    	imv22.setImage(new Image(ht.getTable()[22].getPath()));
+    	    if(ht.getTable()[23]!=null)
+    	    	imv23.setImage(new Image(ht.getTable()[23].getPath()));
+    	    if(ht.getTable()[24]!=null)
+    	    	imv24.setImage(new Image(ht.getTable()[24].getPath()));
+    	    if(ht.getTable()[25]!=null)
+    	    	imv25.setImage(new Image(ht.getTable()[25].getPath()));
+    	    if(ht.getTable()[26]!=null)
+    	    	imv26.setImage(new Image(ht.getTable()[26].getPath()));
+    	}
+    	
+    	
+    	
     	
     }
 
     @FXML
     void inventory(ActionEvent event) {
+    	mode = INVENTORY;
     	opacity31.setVisible(false);
     	imvRandomBlocks.setImage(new Image("/images/Null-02.jpg"));
     	amount.setText("");
@@ -210,13 +291,15 @@ public class GUIController {
 
     @FXML
     void quickAccess(ActionEvent event) {
+    	mode = QUICK_ACCESS;
     	opacity31.setVisible(true);
      	imvRandomBlocks.setImage(new Image("/images/Null-02.jpg"));
     	amount.setText("");
     	changeMode();
     }
     
-    public void setImageRandom(String id) {;
+    public void setImageRandom(String id) {
+    	currentPath = id;
     	imvRandomBlocks.setImage(new Image(id));
     	setLabelAmount();
     }

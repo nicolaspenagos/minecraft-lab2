@@ -9,7 +9,7 @@ public class Inventary {
 	private HashTable ht;
 	
 	public Inventary() {
-		
+		ht = new HashTable();
 	}
 	
 	public String getCurrentBlock() {
@@ -23,11 +23,16 @@ public class Inventary {
 	public void generateRandomBlock() {
 		
 		currentAmount = (int)(Math.random()*64)+1;
-		currentBlock = "block"+((int)(Math.random()*15)+1);
+		currentBlock = "block"+((int)(Math.random()*26)+1);
 		System.out.println(currentBlock);
 	}
 	public boolean add(Cube c) {
 		return ht.add(c);
+		
+	}
+	
+	public HashTable getTable() {
+		return ht;
 	}
 
 }

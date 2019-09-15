@@ -22,137 +22,129 @@
       <Button layoutX="645.0" layoutY="471.0" mnemonicParsing="false" onAction="#next" opacity="0.0" prefHeight="53.0" prefWidth="51.0" />
       <Button layoutX="707.0" layoutY="173.0" mnemonicParsing="false" onAction="#generateBlock" opacity="0.0" prefHeight="25.0" prefWidth="163.0" />
       <Button layoutX="707.0" layoutY="366.0" mnemonicParsing="false" onAction="#add" opacity="0.0" prefHeight="25.0" prefWidth="163.0" />
-      <ImageView fx:id="imv11" fitHeight="34.0" fitWidth="35.0" layoutX="282.0" layoutY="351.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/block1.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="imv12" fitHeight="34.0" fitWidth="35.0" layoutX="321.0" layoutY="351.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/block10.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="imv13" fitHeight="34.0" fitWidth="35.0" layoutX="359.0" layoutY="351.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imv0" fitHeight="34.0" fitWidth="35.0" layoutX="282.0" layoutY="351.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imv1" fitHeight="34.0" fitWidth="35.0" layoutX="321.0" layoutY="351.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imv2" fitHeight="34.0" fitWidth="35.0" layoutX="359.0" layoutY="351.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/block8.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imv14" fitHeight="34.0" fitWidth="35.0" layoutX="397.0" layoutY="351.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imv3" fitHeight="34.0" fitWidth="35.0" layoutX="397.0" layoutY="351.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/block8.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imv15" fitHeight="34.0" fitWidth="35.0" layoutX="435.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imv4" fitHeight="34.0" fitWidth="35.0" layoutX="435.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/block8.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imv16" fitHeight="34.0" fitWidth="35.0" layoutX="474.0" layoutY="351.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imv5" fitHeight="34.0" fitWidth="35.0" layoutX="474.0" layoutY="351.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/block8.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imv17" fitHeight="34.0" fitWidth="35.0" layoutX="513.0" layoutY="351.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imv6" fitHeight="34.0" fitWidth="35.0" layoutX="513.0" layoutY="351.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/block7.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imv18" fitHeight="34.0" fitWidth="35.0" layoutX="551.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imv7" fitHeight="34.0" fitWidth="35.0" layoutX="551.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/block7.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imv19" fitHeight="34.0" fitWidth="35.0" layoutX="589.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imv8" fitHeight="34.0" fitWidth="35.0" layoutX="589.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/block7.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imv29" fitHeight="34.0" fitWidth="35.0" layoutX="590.0" layoutY="390.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imv17" fitHeight="34.0" fitWidth="35.0" layoutX="590.0" layoutY="390.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/block7.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imv28" fitHeight="34.0" fitWidth="35.0" layoutX="552.0" layoutY="390.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imv16" fitHeight="34.0" fitWidth="35.0" layoutX="552.0" layoutY="390.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/block7.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imv27" fitHeight="34.0" fitWidth="35.0" layoutX="513.0" layoutY="389.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imv15" fitHeight="34.0" fitWidth="35.0" layoutX="513.0" layoutY="389.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/block7.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imv26" fitHeight="34.0" fitWidth="35.0" layoutX="474.0" layoutY="390.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imv14" fitHeight="34.0" fitWidth="35.0" layoutX="474.0" layoutY="390.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/block7.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imv25" fitHeight="34.0" fitWidth="35.0" layoutX="436.0" layoutY="390.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imv13" fitHeight="34.0" fitWidth="35.0" layoutX="436.0" layoutY="390.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/block7.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imv24" fitHeight="34.0" fitWidth="35.0" layoutX="397.0" layoutY="390.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imv12" fitHeight="34.0" fitWidth="35.0" layoutX="397.0" layoutY="390.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/block7.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="34.0" fitWidth="35.0" layoutX="358.0" layoutY="389.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imv11" fitHeight="34.0" fitWidth="35.0" layoutX="358.0" layoutY="389.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/block7.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imv22" fitHeight="34.0" fitWidth="35.0" layoutX="320.0" layoutY="389.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imv10" fitHeight="34.0" fitWidth="35.0" layoutX="320.0" layoutY="389.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/block7.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imv21" fitHeight="34.0" fitWidth="35.0" layoutX="282.0" layoutY="389.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imv9" fitHeight="34.0" fitWidth="35.0" layoutX="282.0" layoutY="389.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/block10.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imv31" fitHeight="34.0" fitWidth="35.0" layoutX="282.0" layoutY="428.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imv18" fitHeight="34.0" fitWidth="35.0" layoutX="282.0" layoutY="428.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/block10.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imv32" fitHeight="34.0" fitWidth="35.0" layoutX="320.0" layoutY="428.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imv19" fitHeight="34.0" fitWidth="35.0" layoutX="320.0" layoutY="428.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/block10.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imv33" fitHeight="34.0" fitWidth="35.0" layoutX="358.0" layoutY="428.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imv20" fitHeight="34.0" fitWidth="35.0" layoutX="358.0" layoutY="428.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/block4.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imv34" fitHeight="34.0" fitWidth="35.0" layoutX="397.0" layoutY="429.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imv21" fitHeight="34.0" fitWidth="35.0" layoutX="397.0" layoutY="429.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/block4.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imv35" fitHeight="34.0" fitWidth="35.0" layoutX="436.0" layoutY="429.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imv22" fitHeight="34.0" fitWidth="35.0" layoutX="436.0" layoutY="429.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/block4.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imv36" fitHeight="34.0" fitWidth="35.0" layoutX="474.0" layoutY="429.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imv23" fitHeight="34.0" fitWidth="35.0" layoutX="474.0" layoutY="429.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/block4.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imv37" fitHeight="34.0" fitWidth="35.0" layoutX="515.0" layoutY="428.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imv24" fitHeight="34.0" fitWidth="35.0" layoutX="515.0" layoutY="428.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/block1.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imv38" fitHeight="34.0" fitWidth="35.0" layoutX="553.0" layoutY="428.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imv25" fitHeight="34.0" fitWidth="35.0" layoutX="553.0" layoutY="428.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/block1.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imv39" fitHeight="34.0" fitWidth="35.0" layoutX="591.0" layoutY="428.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imv26" fitHeight="34.0" fitWidth="35.0" layoutX="591.0" layoutY="428.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/block1.png" />
          </image>
