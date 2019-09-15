@@ -1,6 +1,5 @@
 package model;
 import myCollections.HashTable;
-import myCollections.StackL;
 
 public class Inventory {
 	
