@@ -7,7 +7,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import model.Cube;
-import model.Inventary;
+import model.Inventory;
 import myCollections.HashTable;
 import threads.AnimationThread;
 
@@ -168,7 +168,7 @@ public class GUIController {
 	@FXML
 	private ImageView opacity3;
 
-	private Inventary inventary;
+	private Inventory inventary;
 
 	private char mode;
 
@@ -179,7 +179,7 @@ public class GUIController {
 	public void initialize() {
 
 		generateAmountButton.setVisible(false);
-		inventary = new Inventary();
+		inventary = new Inventory();
 		opacity1.setVisible(false);
 		mode = INVENTORY;
 		quickAccessButton.setVisible(true);

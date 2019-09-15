@@ -1,14 +1,14 @@
 package threads;
 
-import model.Inventary;
+import model.Inventory;
 import userinterface.GUIController;
 
 public class AnimationThread extends Thread{
 	
 	private GUIController gui;
-	private Inventary inventary;
+	private Inventory inventary;
 	
-	public AnimationThread(GUIController gui, Inventary inventary) {
+	public AnimationThread(GUIController gui, Inventory inventary) {
 		this.gui = gui;
 		this.inventary = inventary;
 	}

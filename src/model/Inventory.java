@@ -2,13 +2,13 @@ package model;
 import myCollections.HashTable;
 import myCollections.StackL;
 
-public class Inventary {
+public class Inventory {
 	
 	private String currentBlock;
 	private int currentAmount;
 	private HashTable ht;
 	
-	public Inventary() {
+	public Inventory() {
 		ht = new HashTable();
 	}
 	
