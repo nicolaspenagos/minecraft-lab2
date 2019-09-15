@@ -16,6 +16,9 @@ public class GUIController {
 	public final static char QUICK_ACCESS =  'Q';
 
 	public final static char INVENTORY = 'c';
+	
+    @FXML
+    private Button addButton;
 
 	@FXML
 	private Label lb0;
@@ -251,7 +254,8 @@ public class GUIController {
 		quickAccessButton.setVisible(true);
 		inventoryButton.setVisible(false);
 		opacity3.setVisible(false);
-		opacity31.setVisible(false);
+		opacity31.setVisible(true);
+		addButton.setVisible(false);
 		modeLabel.setText("You are in INVENTORY MODE");
 		opacity3.setVisible(true);
 
@@ -398,7 +402,11 @@ public class GUIController {
 
 	@FXML
 	void generateBlock(ActionEvent event) {
-
+		if(mode==QUICK_ACCESS) {
+			opacity31.setVisible(true);
+			opacity3.setVisible(true);
+			addButton.setVisible(false);
+		}
 		amount.setText("");
 		inventary.generateRandomBlock();
 
@@ -411,7 +419,9 @@ public class GUIController {
 
 	@FXML
 	void generateAmount(ActionEvent event) {
+	
 		opacity31.setVisible(false);
+		addButton.setVisible(true);
 		amount.setText(inventary.getCurrentAmount()+"");
 	}
 
@@ -446,7 +456,7 @@ public class GUIController {
 			inventoryButton.setVisible(true);
 			generateAmountButton.setVisible(true);
 			opacity1.setVisible(true);
-			opacity3.setVisible(false);
+		//	opacity3.setVisible(false);
 			opacity2.setVisible(false);
 		}else {
 			modeLabel.setText("You are in INVENTORY MODE");		
@@ -460,6 +470,20 @@ public class GUIController {
 	}
 
 
-	//  public void 
+	 public Button getAddB() {
+		 return addButton;
+	 } 
+	 
+	 public char getMode() {
+		 return mode;
+	 }
+	 
+	 public ImageView getIMV() {
+		 return opacity31;
+	 }
+	 
+	 public ImageView getIMV1() {
+		 return opacity3;
+	 }
 
 }

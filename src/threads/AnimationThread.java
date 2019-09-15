@@ -31,7 +31,14 @@ public class AnimationThread extends Thread{
 			}
 			cont++;	
 		}
-	
+		gui.getAddB().setVisible(true);
+		gui.getIMV().setVisible(false);
+		if(gui.getMode()==gui.QUICK_ACCESS) {
+			gui.getAddB().setVisible(false);
+			gui.getAddB().setVisible(false);
+			gui.getIMV().setVisible(true);
+			gui.getIMV1().setVisible(false);
+		}
 		gui.setImageRandom("/images/"+inventary.getCurrentBlock()+".png");
 		
 	}

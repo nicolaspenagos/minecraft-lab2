@@ -21,7 +21,7 @@
       <Button fx:id="inventoryButton" layoutX="63.0" layoutY="266.0" mnemonicParsing="false" onAction="#inventory" opacity="0.0" prefHeight="53.0" prefWidth="163.0" />
       <Button layoutX="645.0" layoutY="471.0" mnemonicParsing="false" onAction="#next" opacity="0.0" prefHeight="53.0" prefWidth="51.0" />
       <Button layoutX="707.0" layoutY="173.0" mnemonicParsing="false" onAction="#generateBlock" opacity="0.0" prefHeight="25.0" prefWidth="163.0" />
-      <Button layoutX="707.0" layoutY="366.0" mnemonicParsing="false" onAction="#add" opacity="0.0" prefHeight="25.0" prefWidth="163.0" />
+      <Button fx:id="addButton" layoutX="707.0" layoutY="366.0" mnemonicParsing="false" onAction="#add" opacity="0.0" prefHeight="25.0" prefWidth="163.0" />
       <ImageView fx:id="imv0" fitHeight="34.0" fitWidth="35.0" layoutX="282.0" layoutY="351.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="imv1" fitHeight="34.0" fitWidth="35.0" layoutX="321.0" layoutY="351.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="imv2" fitHeight="34.0" fitWidth="35.0" layoutX="359.0" layoutY="351.0" pickOnBounds="true" preserveRatio="true">
