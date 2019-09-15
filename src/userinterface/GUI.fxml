@@ -256,5 +256,13 @@
       <Label fx:id="lb24" layoutX="534.0" layoutY="445.0" textFill="WHITE" />
       <Label fx:id="lb25" layoutX="571.0" layoutY="445.0" textFill="WHITE" />
       <Label fx:id="lb23" layoutX="495.0" layoutY="445.0" textFill="WHITE" />
+      <Label fx:id="qAl" layoutX="225.0" layoutY="489.0" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lb411" layoutX="287.0" layoutY="492.0" text="Label" textFill="WHITE" />
+      <Label fx:id="lb42" layoutX="329.0" layoutY="489.0" text="Label" textFill="WHITE" />
+      <Label fx:id="lb43" layoutX="365.0" layoutY="489.0" text="Label" textFill="WHITE" />
    </children>
 </Pane>
