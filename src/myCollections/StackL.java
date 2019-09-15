@@ -4,6 +4,7 @@ public class StackL <M> implements StackI<M> {
 
 	private Node<M> top;
 	
+	
 	public StackL() {
 		
 	}

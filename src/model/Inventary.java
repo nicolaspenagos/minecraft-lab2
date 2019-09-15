@@ -1,12 +1,12 @@
 package model;
-
+import myCollections.HashTable;
 import myCollections.StackL;
 
 public class Inventary {
 	
 	private String currentBlock;
 	private int currentAmount;
-	private StackL<Integer> a;
+	private HashTable ht;
 	
 	public Inventary() {
 		
@@ -25,8 +25,9 @@ public class Inventary {
 		currentAmount = (int)(Math.random()*64)+1;
 		currentBlock = "block"+((int)(Math.random()*15)+1);
 		System.out.println(currentBlock);
-	
-		
+	}
+	public boolean add(Cube c) {
+		return ht.add(c);
 	}
 
 }
