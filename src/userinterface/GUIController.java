@@ -20,6 +20,10 @@ public class GUIController {
 
 	@FXML
 	private Button addButton;
+	
+
+    @FXML
+    private Label sameType;
 
     @FXML
     private Label lb411;
@@ -292,6 +296,7 @@ public class GUIController {
 
 	@FXML
 	public void initialize() {
+		sameType.setVisible(false);
 		isFull.setVisible(false);
 		generateAmountButton.setVisible(false);
 		currentQuickAccess = 1;
@@ -312,6 +317,7 @@ public class GUIController {
 
 	@FXML
 	void add(ActionEvent event) {
+		sameType.setVisible(false);
 		if (mode == INVENTORY) {
 
 			String[] parts = currentPath.split("/");
@@ -448,17 +454,32 @@ public class GUIController {
 				msg += line.charAt(i);
 				i++;
 			}
-
 			Cube c = new Cube(currentPath, msg);
-
-		    quickAccess.add(c, currentQuickAccess, Integer.parseInt(amount.getText()));
+			System.out.println(quickAccess.isNull(currentQuickAccess));
+			if(quickAccess.isNull(currentQuickAccess)){
+				 quickAccess.add(c, currentQuickAccess, Integer.parseInt(amount.getText()));
+			}else {
+				
+			
+				if(c.getKey().equals(quickAccess.getCurrentKey(currentQuickAccess))) {
+					 quickAccess.add(c, currentQuickAccess, Integer.parseInt(amount.getText()));
+				}else {
+					sameType.setVisible(true);
+				}
+			}
+			update();
+			
+			
+			
+		   
 		    
-		    update();
+		    
 		}
 	}
 
 	@FXML
 	void inventory(ActionEvent event) {
+		sameType.setVisible(false);
 		mode = INVENTORY;
 		opacity31.setVisible(false);
 		imvRandomBlocks.setImage(new Image("/images/Null-02.jpg"));
@@ -468,6 +489,7 @@ public class GUIController {
 
 	@FXML
 	void generateBlock(ActionEvent event) {
+		sameType.setVisible(false);
 		if (mode == QUICK_ACCESS) {
 			opacity31.setVisible(true);
 			opacity3.setVisible(true);
@@ -484,7 +506,7 @@ public class GUIController {
 
 	@FXML
 	void generateAmount(ActionEvent event) {
-
+		sameType.setVisible(false);
 		opacity31.setVisible(false);
 		addButton.setVisible(true);
 		amount.setText(inventary.getCurrentAmount() + "");
@@ -492,6 +514,7 @@ public class GUIController {
 
 	@FXML
 	void next(ActionEvent event) {
+		sameType.setVisible(false);
 		isFull.setVisible(false);
 		if (currentQuickAccess == 27) {
 			currentQuickAccess = 1;
@@ -505,6 +528,7 @@ public class GUIController {
 
 	@FXML
 	void quickAccess(ActionEvent event) {
+		sameType.setVisible(false);
 		mode = QUICK_ACCESS;
 		opacity31.setVisible(true);
 		imvRandomBlocks.setImage(new Image("/images/Null-02.jpg"));
@@ -570,7 +594,10 @@ public class GUIController {
 	    if(numberOfImages==1) {
 	    	imv41.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
 	    	lb411.setText(size+" ");
-	    	
+	    	if(size==0) {
+	    		lb411.setText(64+" ");
+	    		
+	    	}
 	    	imv42.setImage(new Image("/images/Null-02.jpg"));
 	    	imv43.setImage(new Image("/images/Null-02.jpg"));
 	    	imv44.setImage(new Image("/images/Null-02.jpg"));
@@ -594,6 +621,11 @@ public class GUIController {
 	    	imv42.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
 	    	lb411.setText(64+" ");
 	    	lb42.setText(size+" ");
+	    	if(size==0) {
+	    		lb42.setText(64+" ");
+	    		
+	    	}
+	    	
 	    	
 	    	imv43.setImage(new Image("/images/Null-02.jpg"));
 	    	imv44.setImage(new Image("/images/Null-02.jpg"));
@@ -618,6 +650,11 @@ public class GUIController {
 	    	lb411.setText(64+" ");
 	    	lb42.setText(64+" ");
 	    	lb43.setText(size+" ");
+	    	if(size==0) {
+	    		lb43.setText(64+" ");
+	    		
+	    	}
+	    	
 	    	
 	    	imv44.setImage(new Image("/images/Null-02.jpg"));
 	    	imv45.setImage(new Image("/images/Null-02.jpg"));
@@ -642,6 +679,9 @@ public class GUIController {
 	    	lb42.setText(64+" ");
 	    	lb43.setText(64+" ");
 	    	lb44.setText(size+" ");
+	    	if(size==0) {
+	    		lb44.setText(64+" ");
+	    	}
 	    	
 	    	imv45.setImage(new Image("/images/Null-02.jpg"));
 	    	imv46.setImage(new Image("/images/Null-02.jpg"));
@@ -666,6 +706,10 @@ public class GUIController {
 	    	lb43.setText(64+" ");
 	    	lb44.setText(64+" ");
 	    	lb45.setText(size+" ");
+	    	if(size==0) {
+	    		lb45.setText(64+" ");
+	    		
+	    	}
 	    	
 	    	imv46.setImage(new Image("/images/Null-02.jpg"));
 	    	imv47.setImage(new Image("/images/Null-02.jpg"));
@@ -690,7 +734,9 @@ public class GUIController {
 	    	lb44.setText(64+" ");
 	    	lb45.setText(64+" ");
 	    	lb46.setText(size+" ");
-	    	
+	    	if(size==0) {
+	    		lb46.setText(64+" ");
+	    	}
 	    	imv47.setImage(new Image("/images/Null-02.jpg"));
 	    	imv48.setImage(new Image("/images/Null-02.jpg"));
 	    	imv49.setImage(new Image("/images/Null-02.jpg"));
@@ -714,7 +760,10 @@ public class GUIController {
 	    	lb45.setText(64+" ");
 	    	lb46.setText(64+" ");
 	    	lb47.setText(size+" ");
-	    	
+	    	if(size==0) {
+	    		lb47.setText(64+" ");
+	    		
+	    	}
 	    	imv48.setImage(new Image("/images/Null-02.jpg"));
 	    	imv49.setImage(new Image("/images/Null-02.jpg"));
 	    	lb48.setText(" ");
@@ -738,7 +787,10 @@ public class GUIController {
 	    	lb46.setText(64+" ");
 	    	lb47.setText(64+" ");
 	    	lb48.setText(size+" ");
-	    	
+	    	if(size==0) {
+	    		lb48.setText(64+" ");
+	    		
+	    	}
 	    	imv49.setImage(new Image("/images/Null-02.jpg"));
 	    	lb49.setText(" ");
 	    }
@@ -772,6 +824,7 @@ public class GUIController {
 
     @FXML
     void prev(ActionEvent event) {
+    	sameType.setVisible(false);
     	isFull.setVisible(false);
 		if (currentQuickAccess == 1) {
 			currentQuickAccess = 27;

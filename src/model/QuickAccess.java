@@ -47,6 +47,19 @@ public class QuickAccess {
 		Cube c = (Cube)quickA[y].top();
 		return c.getPath();
 	}
+	
+	public boolean isNull(int y) {
+		Cube c = (Cube)quickA[y].top();
+		if(c==null)
+			return true;
+		else 
+			return false;
+	}
+	
+	public String getCurrentKey(int y) {
+		Cube c = (Cube)quickA[y].top();
+		return c.getKey();
+	}
 
 
 }
