@@ -11,14 +11,14 @@
    <children>
       <ImageView fitHeight="558.0" fitWidth="922.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../images/Title-01-01.jpg" />
+            <Image url="@../images/B-01.jpg" />
          </image></ImageView>
       <ImageView fitHeight="408.0" fitWidth="922.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../images/Body-WithButtons-01.jpg" />
+            <Image url="@../images/A-01.jpg" />
          </image></ImageView>
-      <Button layoutX="63.0" layoutY="191.0" mnemonicParsing="false" onAction="#reestart" opacity="0.0" prefHeight="61.0" prefWidth="163.0" style="-fx-background-color: WHITE;" textFill="#b24545" />
-      <Button layoutX="63.0" layoutY="266.0" mnemonicParsing="false" onAction="#exit" opacity="0.0" prefHeight="53.0" prefWidth="163.0" />
+      <Button fx:id="quickAccessButton" layoutX="63.0" layoutY="191.0" mnemonicParsing="false" onAction="#quickAccess" opacity="0.0" prefHeight="61.0" prefWidth="163.0" style="-fx-background-color: WHITE;" textFill="#b24545" />
+      <Button fx:id="inventoryButton" layoutX="63.0" layoutY="266.0" mnemonicParsing="false" onAction="#inventory" opacity="0.0" prefHeight="53.0" prefWidth="163.0" />
       <Button layoutX="645.0" layoutY="471.0" mnemonicParsing="false" onAction="#next" opacity="0.0" prefHeight="53.0" prefWidth="51.0" />
       <Button layoutX="707.0" layoutY="173.0" mnemonicParsing="false" onAction="#generateBlock" opacity="0.0" prefHeight="25.0" prefWidth="163.0" />
       <Button layoutX="707.0" layoutY="366.0" mnemonicParsing="false" onAction="#add" opacity="0.0" prefHeight="25.0" prefWidth="163.0" />
@@ -202,12 +202,40 @@
             <Image url="@images/block14.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imvRandomBlocks" fitHeight="61.0" fitWidth="62.0" layoutX="760.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imvRandomBlocks" fitHeight="61.0" fitWidth="62.0" layoutX="760.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Null-02.jpg" />
+         </image></ImageView>
       <Label fx:id="amount" layoutX="811.0" layoutY="274.0" textFill="WHITE">
          <font>
             <Font name="Minecraft Regular" size="18.0" />
          </font>
       </Label>
-      <Button layoutX="707.0" layoutY="330.0" mnemonicParsing="false" onAction="#generateAmount" opacity="0.0" prefHeight="25.0" prefWidth="163.0" />
+      <Button fx:id="generateAmountButton" layoutX="707.0" layoutY="330.0" mnemonicParsing="false" onAction="#generateAmount" opacity="0.0" prefHeight="25.0" prefWidth="163.0" />
+      <ImageView fx:id="opacity1" fitHeight="61.0" fitWidth="163.0" layoutX="62.0" layoutY="193.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Opacity-02.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="opacity2" fitHeight="61.0" fitWidth="163.0" layoutX="62.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Opacity-02.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="modeLabel" layoutX="338.0" layoutY="144.0" prefHeight="17.0" prefWidth="337.0" text="You are in QUICK ACCES" textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font name="Minecraft Regular" size="13.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="opacity3" fitHeight="29.0" fitWidth="163.0" layoutX="708.0" layoutY="329.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Mine-02.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="opacity31" fitHeight="29.0" fitWidth="163.0" layoutX="708.0" layoutY="365.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Mine-02.png" />
+         </image>
+      </ImageView>
    </children>
 </Pane>

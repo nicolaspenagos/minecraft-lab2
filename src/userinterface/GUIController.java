@@ -2,6 +2,7 @@ package userinterface;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -9,6 +10,22 @@ import model.Inventary;
 import threads.AnimationThread;
 
 public class GUIController {
+	
+	public final static char QUICK_ACCESS =  'Q';
+	
+	public final static char INVENTORY = 'c';
+	
+    @FXML
+    private ImageView opacity31;
+
+    @FXML
+    private Button quickAccessButton;
+
+    @FXML
+    private Button inventoryButton;
+    
+    @FXML
+    private Button generateAmountButton;
 
     @FXML
     private ImageView imv11;
@@ -116,16 +133,42 @@ public class GUIController {
     private ImageView imv41;
 
     @FXML
+    private ImageView opacity1;
+
+    @FXML
+    private ImageView opacity2;
+
+    @FXML
     private ImageView imvRandomBlocks;
+    
+
+    @FXML
+    private Label modeLabel;
     
     @FXML
     private Label amount;
+    
+    @FXML
+    private ImageView opacity3;
    
     private Inventary inventary;
     
+    private char mode;
+        
     @FXML
     public void initialize() {
+    	
+    	generateAmountButton.setVisible(false);
     	inventary = new Inventary();
+    	opacity1.setVisible(false);
+    	mode = INVENTORY;
+    	quickAccessButton.setVisible(true);
+    	inventoryButton.setVisible(false);
+    	opacity3.setVisible(false);
+    	opacity31.setVisible(false);
+    	modeLabel.setText("You are in INVENTORY MODE");
+    	opacity3.setVisible(true);
+    	
     }
     
     @FXML
@@ -134,14 +177,19 @@ public class GUIController {
     }
 
     @FXML
-    void exit(ActionEvent event) {
-
+    void inventory(ActionEvent event) {
+    	opacity31.setVisible(false);
+    	imvRandomBlocks.setImage(new Image("/images/Null-02.jpg"));
+    	amount.setText("");
+    	changeMode();
     }
 
     @FXML
     void generateBlock(ActionEvent event) {
     	
+    	amount.setText("");
     	inventary.generateRandomBlock();
+    	
     	AnimationThread aT = new AnimationThread(this, inventary);
     	aT.setDaemon(true);
     	aT.start(); 
@@ -151,6 +199,7 @@ public class GUIController {
     
     @FXML
     void generateAmount(ActionEvent event) {
+    	opacity31.setVisible(false);
     	amount.setText(inventary.getCurrentAmount()+"");
     }
 
@@ -160,8 +209,11 @@ public class GUIController {
     }
 
     @FXML
-    void reestart(ActionEvent event) {
-    	
+    void quickAccess(ActionEvent event) {
+    	opacity31.setVisible(true);
+     	imvRandomBlocks.setImage(new Image("/images/Null-02.jpg"));
+    	amount.setText("");
+    	changeMode();
     }
     
     public void setImageRandom(String id) {;
@@ -173,6 +225,25 @@ public class GUIController {
 
     }
 
+    public void changeMode() {
+    	if(modeLabel.getText().equals("You are in INVENTORY MODE")) {
+    		modeLabel.setText("You are in QUICK ACCESS MODE");
+    		quickAccessButton.setVisible(false);
+    		inventoryButton.setVisible(true);
+    		generateAmountButton.setVisible(true);
+    		opacity1.setVisible(true);
+    		opacity3.setVisible(false);
+    		opacity2.setVisible(false);
+    	}else {
+    		modeLabel.setText("You are in INVENTORY MODE");		
+    		quickAccessButton.setVisible(true);
+    		inventoryButton.setVisible(false);
+    		opacity1.setVisible(false);
+    		generateAmountButton.setVisible(false);
+    		opacity2.setVisible(true);
+    		opacity3.setVisible(true);
+    	}
+    }
 
     
   //  public void 
