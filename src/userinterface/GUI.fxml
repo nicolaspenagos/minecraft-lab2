@@ -229,10 +229,32 @@
             <Image url="@../images/Mine-02.png" />
          </image>
       </ImageView>
-      <Label fx:id="lb0" layoutX="297.0" layoutY="368.0" text="a" textFill="WHITE" />
-      <Label fx:id="lb1" layoutX="334.0" layoutY="366.0" text="a" textFill="WHITE" />
-      <Label fx:id="lb2" layoutX="377.0" layoutY="367.0" text="a" textFill="WHITE" />
-      <Label fx:id="lb3" layoutX="412.0" layoutY="366.0" text="a" textFill="WHITE" />
-      <Label fx:id="lb4" layoutX="454.0" layoutY="366.0" text="a" textFill="WHITE" />
+      <Label fx:id="lb0" layoutX="303.0" layoutY="367.0" textFill="WHITE" />
+      <Label fx:id="lb1" layoutX="342.0" layoutY="367.0" textFill="WHITE" />
+      <Label fx:id="lb2" layoutX="380.0" layoutY="367.0" textFill="WHITE" />
+      <Label fx:id="lb3" layoutX="418.0" layoutY="367.0" textFill="WHITE" />
+      <Label fx:id="lb4" layoutX="456.0" layoutY="367.0" textFill="WHITE" />
+      <Label fx:id="lb9" layoutX="303.0" layoutY="406.0" textFill="WHITE" />
+      <Label fx:id="lb18" layoutX="303.0" layoutY="445.0" textFill="WHITE" />
+      <Label fx:id="lb12" layoutX="418.0" layoutY="406.0" textFill="WHITE" />
+      <Label fx:id="lb11" layoutX="380.0" layoutY="406.0" textFill="WHITE" />
+      <Label fx:id="lb10" layoutX="342.0" layoutY="406.0" textFill="WHITE" />
+      <Label fx:id="lb5" layoutX="495.0" layoutY="367.0" textFill="WHITE" />
+      <Label fx:id="lb6" layoutX="534.0" layoutY="367.0" textFill="WHITE" />
+      <Label fx:id="lb7" layoutX="571.0" layoutY="367.0" textFill="WHITE" />
+      <Label fx:id="lb8" layoutX="609.0" layoutY="367.0" textFill="WHITE" />
+      <Label fx:id="lb13" layoutX="456.0" layoutY="406.0" textFill="WHITE" />
+      <Label fx:id="lb14" layoutX="495.0" layoutY="406.0" textFill="WHITE" />
+      <Label fx:id="lb15" layoutX="534.0" layoutY="406.0" textFill="WHITE" />
+      <Label fx:id="lb16" layoutX="571.0" layoutY="406.0" textFill="WHITE" />
+      <Label fx:id="lb17" layoutX="609.0" layoutY="406.0" textFill="WHITE" />
+      <Label fx:id="lb21" layoutX="418.0" layoutY="445.0" textFill="WHITE" />
+      <Label fx:id="lb20" layoutX="380.0" layoutY="445.0" textFill="WHITE" />
+      <Label fx:id="lb19" layoutX="342.0" layoutY="445.0" textFill="WHITE" />
+      <Label fx:id="lb26" layoutX="609.0" layoutY="445.0" textFill="WHITE" />
+      <Label fx:id="lb22" layoutX="456.0" layoutY="445.0" textFill="WHITE" />
+      <Label fx:id="lb24" layoutX="534.0" layoutY="445.0" textFill="WHITE" />
+      <Label fx:id="lb25" layoutX="571.0" layoutY="445.0" textFill="WHITE" />
+      <Label fx:id="lb23" layoutX="495.0" layoutY="445.0" textFill="WHITE" />
    </children>
 </Pane>
