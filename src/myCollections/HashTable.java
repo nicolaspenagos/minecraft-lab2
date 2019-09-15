@@ -33,6 +33,8 @@ public class HashTable implements HashTableI {
 			if(added == false) {
 				could = false;
 			}
+		}else {
+			could = false;
 		}
 		return could;
 	}

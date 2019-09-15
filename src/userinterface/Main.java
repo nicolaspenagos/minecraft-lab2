@@ -19,5 +19,5 @@ public class Main extends Application{
 		stage.setTitle("MINECRAFT");
 		stage.show();
 	}
-
+	
 }
