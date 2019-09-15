@@ -67,24 +67,24 @@ public class StackA {
 		return itemsTop;
 	}
 
-	public boolean search(Object toSearch) {
-
-		boolean found = false;
-
-		int cont = 0;
-		while (cont < top) {
-
-			Object current = items[cont];
-			if (toSearch.equals(current)) {
-				found = true;
-			}
-
-			cont++;
-		}
-
-		return found;
-
-	}
+//	public boolean search(Object toSearch) {
+//
+//		boolean found = false;
+//
+//		int cont = 0;
+//		while (cont < top) {
+//
+//			Object current = items[cont];
+//			if (toSearch.equals(current)) {
+//				found = true;
+//			}
+//
+//			cont++;
+//		}
+//
+//		return found;
+//
+//	}
 
 	public int size() {
 		int size = 0;
