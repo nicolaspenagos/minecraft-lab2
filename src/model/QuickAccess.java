@@ -39,11 +39,14 @@ public class QuickAccess {
 	public int residue(int y) {
 		
 		int x = sizes[y]%64;
-	
+		System.out.println("x "+x);
 		return x;
 	}
 	
-	
+	public String getPath(int y) {
+		Cube c = (Cube)quickA[y].top();
+		return c.getPath();
+	}
 
 
 }

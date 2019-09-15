@@ -112,6 +112,29 @@ public class GUIController {
 
 	@FXML
 	private Label lb43;
+	
+    @FXML
+    private Label isFull;
+
+	
+
+    @FXML
+    private Label lb44;
+
+    @FXML
+    private Label lb45;
+
+    @FXML
+    private Label lb46;
+
+    @FXML
+    private Label lb47;
+
+    @FXML
+    private Label lb48;
+
+    @FXML
+    private Label lb49;
 
 	@FXML
 	private ImageView opacity31;
@@ -211,6 +234,12 @@ public class GUIController {
 
 	@FXML
 	private ImageView imv47;
+	
+	@FXML
+	private ImageView imv48;
+	
+	@FXML
+	private ImageView imv49;
 
 	@FXML
 	private ImageView imv46;
@@ -263,7 +292,7 @@ public class GUIController {
 
 	@FXML
 	public void initialize() {
-
+		isFull.setVisible(false);
 		generateAmountButton.setVisible(false);
 		currentQuickAccess = 1;
 		qAl.setText("" + currentQuickAccess);
@@ -422,12 +451,9 @@ public class GUIController {
 
 			Cube c = new Cube(currentPath, msg);
 
-			System.out.println(quickAccess.add(c, currentQuickAccess, Integer.parseInt(amount.getText())));
-			System.out.println(quickAccess.numberOfImages(currentQuickAccess) + "");
-			if (quickAccess.numberOfImages(currentQuickAccess) == 1) {
-				imv41.setImage(imvRandomBlocks.getImage());
-				lb411.setText(amount.getText());
-			}
+		    quickAccess.add(c, currentQuickAccess, Integer.parseInt(amount.getText()));
+		    
+		    update();
 		}
 	}
 
@@ -466,6 +492,7 @@ public class GUIController {
 
 	@FXML
 	void next(ActionEvent event) {
+		isFull.setVisible(false);
 		if (currentQuickAccess == 27) {
 			currentQuickAccess = 1;
 		} else {
@@ -473,6 +500,7 @@ public class GUIController {
 		}
 
 		qAl.setText("" + currentQuickAccess);
+		update();
 	}
 
 	@FXML
@@ -513,6 +541,247 @@ public class GUIController {
 			opacity3.setVisible(true);
 		}
 	}
+	
+	public void update() {
+	    int numberOfImages = quickAccess.numberOfImages(currentQuickAccess);
+	    System.out.println("HumberOfImages"+numberOfImages);
+	    int size = quickAccess.residue(currentQuickAccess);
+	    
+	    if(numberOfImages==0) {
+	    	imv41.setImage(new Image("/images/Null-02.jpg"));
+	    	imv42.setImage(new Image("/images/Null-02.jpg"));
+	    	imv43.setImage(new Image("/images/Null-02.jpg"));
+	    	imv44.setImage(new Image("/images/Null-02.jpg"));
+	    	imv45.setImage(new Image("/images/Null-02.jpg"));
+	    	imv46.setImage(new Image("/images/Null-02.jpg"));
+	    	imv47.setImage(new Image("/images/Null-02.jpg"));
+	    	imv48.setImage(new Image("/images/Null-02.jpg"));
+	    	imv49.setImage(new Image("/images/Null-02.jpg"));
+	    	lb411.setText(" ");
+	    	lb42.setText(" ");
+	    	lb43.setText(" ");
+	    	lb44.setText(" ");
+	    	lb45.setText(" ");
+	    	lb46.setText(" ");
+	    	lb47.setText(" ");
+	    	lb48.setText(" ");
+	    	lb49.setText(" ");
+	    }
+	    if(numberOfImages==1) {
+	    	imv41.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	lb411.setText(size+" ");
+	    	
+	    	imv42.setImage(new Image("/images/Null-02.jpg"));
+	    	imv43.setImage(new Image("/images/Null-02.jpg"));
+	    	imv44.setImage(new Image("/images/Null-02.jpg"));
+	    	imv45.setImage(new Image("/images/Null-02.jpg"));
+	    	imv46.setImage(new Image("/images/Null-02.jpg"));
+	    	imv47.setImage(new Image("/images/Null-02.jpg"));
+	    	imv48.setImage(new Image("/images/Null-02.jpg"));
+	    	imv49.setImage(new Image("/images/Null-02.jpg"));
+	    	lb42.setText(" ");
+	    	lb43.setText(" ");
+	    	lb44.setText(" ");
+	    	lb45.setText(" ");
+	    	lb46.setText(" ");
+	    	lb47.setText(" ");
+	    	lb48.setText(" ");
+	    	lb49.setText(" ");
+	    }
+	    
+	    if(numberOfImages==2) {
+	    	imv41.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	imv42.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	lb411.setText(64+" ");
+	    	lb42.setText(size+" ");
+	    	
+	    	imv43.setImage(new Image("/images/Null-02.jpg"));
+	    	imv44.setImage(new Image("/images/Null-02.jpg"));
+	    	imv45.setImage(new Image("/images/Null-02.jpg"));
+	    	imv46.setImage(new Image("/images/Null-02.jpg"));
+	    	imv47.setImage(new Image("/images/Null-02.jpg"));
+	    	imv48.setImage(new Image("/images/Null-02.jpg"));
+	    	imv49.setImage(new Image("/images/Null-02.jpg"));
+	    	lb43.setText(" ");
+	    	lb44.setText(" ");
+	    	lb45.setText(" ");
+	    	lb46.setText(" ");
+	    	lb47.setText(" ");
+	    	lb48.setText(" ");
+	    	lb49.setText(" ");
+	    }
+	    
+	    if(numberOfImages==3) {
+	    	imv41.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	imv42.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	imv43.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	lb411.setText(64+" ");
+	    	lb42.setText(64+" ");
+	    	lb43.setText(size+" ");
+	    	
+	    	imv44.setImage(new Image("/images/Null-02.jpg"));
+	    	imv45.setImage(new Image("/images/Null-02.jpg"));
+	    	imv46.setImage(new Image("/images/Null-02.jpg"));
+	    	imv47.setImage(new Image("/images/Null-02.jpg"));
+	    	imv48.setImage(new Image("/images/Null-02.jpg"));
+	    	imv49.setImage(new Image("/images/Null-02.jpg"));
+	    	lb44.setText(" ");
+	    	lb45.setText(" ");
+	    	lb46.setText(" ");
+	    	lb47.setText(" ");
+	    	lb48.setText(" ");
+	    	lb49.setText(" ");
+	    }
+	    
+	    if(numberOfImages==4) {
+	    	imv41.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	imv42.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	imv43.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	imv44.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	lb411.setText(64+" ");
+	    	lb42.setText(64+" ");
+	    	lb43.setText(64+" ");
+	    	lb44.setText(size+" ");
+	    	
+	    	imv45.setImage(new Image("/images/Null-02.jpg"));
+	    	imv46.setImage(new Image("/images/Null-02.jpg"));
+	    	imv47.setImage(new Image("/images/Null-02.jpg"));
+	    	imv48.setImage(new Image("/images/Null-02.jpg"));
+	    	imv49.setImage(new Image("/images/Null-02.jpg"));
+	    	lb45.setText(" ");
+	    	lb46.setText(" ");
+	    	lb47.setText(" ");
+	    	lb48.setText(" ");
+	    	lb49.setText(" ");
+	    }
+	    
+	    if(numberOfImages==5) {
+	    	imv41.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	imv42.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	imv43.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	imv44.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	imv45.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	lb411.setText(64+" ");
+	    	lb42.setText(64+" ");
+	    	lb43.setText(64+" ");
+	    	lb44.setText(64+" ");
+	    	lb45.setText(size+" ");
+	    	
+	    	imv46.setImage(new Image("/images/Null-02.jpg"));
+	    	imv47.setImage(new Image("/images/Null-02.jpg"));
+	    	imv48.setImage(new Image("/images/Null-02.jpg"));
+	    	imv49.setImage(new Image("/images/Null-02.jpg"));
+	    	lb46.setText(" ");
+	    	lb47.setText(" ");
+	    	lb48.setText(" ");
+	    	lb49.setText(" ");
+	    }
+	    
+	    if(numberOfImages==6) {
+	    	imv41.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	imv42.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	imv43.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	imv44.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	imv45.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	imv46.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	lb411.setText(64+" ");
+	    	lb42.setText(64+" ");
+	    	lb43.setText(64+" ");
+	    	lb44.setText(64+" ");
+	    	lb45.setText(64+" ");
+	    	lb46.setText(size+" ");
+	    	
+	    	imv47.setImage(new Image("/images/Null-02.jpg"));
+	    	imv48.setImage(new Image("/images/Null-02.jpg"));
+	    	imv49.setImage(new Image("/images/Null-02.jpg"));
+	    	lb47.setText(" ");
+	    	lb48.setText(" ");
+	    	lb49.setText(" ");
+	    }
+	    
+	    if(numberOfImages==7) {
+	    	imv41.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	imv42.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	imv43.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	imv44.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	imv45.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	imv46.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	imv47.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	lb411.setText(64+" ");
+	    	lb42.setText(64+" ");
+	    	lb43.setText(64+" ");
+	    	lb44.setText(64+" ");
+	    	lb45.setText(64+" ");
+	    	lb46.setText(64+" ");
+	    	lb47.setText(size+" ");
+	    	
+	    	imv48.setImage(new Image("/images/Null-02.jpg"));
+	    	imv49.setImage(new Image("/images/Null-02.jpg"));
+	    	lb48.setText(" ");
+	    	lb49.setText(" ");
+	    }
+	    
+	    if(numberOfImages==8) {
+	    	imv41.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	imv42.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	imv43.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	imv44.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	imv45.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	imv46.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	imv47.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	imv48.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	lb411.setText(64+" ");
+	    	lb42.setText(64+" ");
+	    	lb43.setText(64+" ");
+	    	lb44.setText(64+" ");
+	    	lb45.setText(64+" ");
+	    	lb46.setText(64+" ");
+	    	lb47.setText(64+" ");
+	    	lb48.setText(size+" ");
+	    	
+	    	imv49.setImage(new Image("/images/Null-02.jpg"));
+	    	lb49.setText(" ");
+	    }
+	    
+	    if(numberOfImages==9) {
+	    	imv41.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	imv42.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	imv43.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	imv44.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	imv45.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	imv46.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	imv47.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	imv48.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	imv49.setImage(new Image(quickAccess.getPath(currentQuickAccess)));
+	    	lb411.setText(64+" ");
+	    	lb42.setText(64+" ");
+	    	lb43.setText(64+" ");
+	    	lb44.setText(64+" ");
+	    	lb45.setText(64+" ");
+	    	lb46.setText(64+" ");
+	    	lb47.setText(64+" ");
+	    	lb48.setText(64+" ");
+	    	lb49.setText(size+" ");
+	    	if(size==0) {
+	    		lb49.setText(64+" ");
+	    		isFull.setVisible(true);
+	    	}
+	    }
+	}
+	
+
+    @FXML
+    void prev(ActionEvent event) {
+    	isFull.setVisible(false);
+		if (currentQuickAccess == 1) {
+			currentQuickAccess = 27;
+		} else {
+			currentQuickAccess--;
+		}
+
+		qAl.setText("" + currentQuickAccess);
+		update();
+    }
 
 	public Button getAddB() {
 		return addButton;

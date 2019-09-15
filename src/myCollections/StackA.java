@@ -27,7 +27,7 @@ public class StackA {
 					items[top] = toPush;
 				}
 			}else {
-				int i = currentSize+y -MAX_STACK;
+				int i =  MAX_STACK-currentSize;
 				for (int j = 0; j < i; j++) {
 					top++;
 					items[top] = toPush;
