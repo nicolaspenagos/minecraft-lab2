@@ -1,12 +1,10 @@
 package modelTest;
 
 import static org.junit.Assert.assertTrue;
-import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
 import model.Cube;
-import model.Inventory;
 import model.QuickAccess;
 class QuickAccessTest {
 	
@@ -23,7 +21,7 @@ class QuickAccessTest {
 	}
 	
 	@Test
-	void QuickAccessTest() {
+	void quickAccessTest() {
 		
 		setUpScenary1();
 		assertTrue("The constructor is not working", qA != null);
