@@ -16,14 +16,14 @@ public class AnimationThread extends Thread{
 	@Override 
 	public void run() {
 	   	
-		int cont = 1;
+		int cont = 0;
 		while(cont<=26) {
 			String id = "/images/block"+cont+".png";
 			
 			try {
 				
 			    gui.setImageRandom(id);
-				sleep(120);
+				sleep(80);
 			
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
