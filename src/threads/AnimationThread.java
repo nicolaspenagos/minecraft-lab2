@@ -17,13 +17,13 @@ public class AnimationThread extends Thread{
 	public void run() {
 	   	
 		int cont = 1;
-		while(cont<=15) {
+		while(cont<=26) {
 			String id = "/images/block"+cont+".png";
 			
 			try {
 				
 			    gui.setImageRandom(id);
-				sleep(160);
+				sleep(120);
 			
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
