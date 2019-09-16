@@ -37,7 +37,7 @@ class QuickAccessTest {
 	}
 	
 	@Test 
-	void numberOfImages() {
+	void numberOfImagesTest() {
 		
 		setUpScenary2();
 		qA.add(c, 1, 100);
