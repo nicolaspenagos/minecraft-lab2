@@ -535,6 +535,21 @@ public class GUIController {
 		amount.setText("");
 		changeMode();
 	}
+	public Button getAddB() {
+		return addButton;
+	}
+
+	public char getMode() {
+		return mode;
+	}
+
+	public ImageView getIMV() {
+		return opacity31;
+	}
+
+	public ImageView getIMV1() {
+		return opacity3;
+	}
 
 	public void setImageRandom(String id) {
 		currentPath = id;
@@ -836,20 +851,6 @@ public class GUIController {
 		update();
     }
 
-	public Button getAddB() {
-		return addButton;
-	}
-
-	public char getMode() {
-		return mode;
-	}
-
-	public ImageView getIMV() {
-		return opacity31;
-	}
-
-	public ImageView getIMV1() {
-		return opacity3;
-	}
+	
 
 }
