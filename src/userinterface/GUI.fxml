@@ -261,15 +261,15 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <Label fx:id="lb411" layoutX="287.0" layoutY="492.0" textFill="WHITE" />
-      <Label fx:id="lb42" layoutX="325.0" layoutY="492.0" textFill="WHITE" />
-      <Label fx:id="lb43" layoutX="362.0" layoutY="492.0" textFill="WHITE" />
-      <Label fx:id="lb44" layoutX="404.0" layoutY="490.0" textFill="WHITE" />
-      <Label fx:id="lb45" layoutX="443.0" layoutY="489.0" textFill="WHITE" />
-      <Label fx:id="lb46" layoutX="481.0" layoutY="488.0" textFill="WHITE" />
-      <Label fx:id="lb47" layoutX="520.0" layoutY="487.0" textFill="WHITE" />
-      <Label fx:id="lb48" layoutX="559.0" layoutY="484.0" textFill="WHITE" />
-      <Label fx:id="lb49" layoutX="597.0" layoutY="484.0" textFill="WHITE" />
+      <Label fx:id="lb411" layoutX="303.0" layoutY="492.0" textFill="WHITE" />
+      <Label fx:id="lb42" layoutX="340.0" layoutY="492.0" textFill="WHITE" />
+      <Label fx:id="lb43" layoutX="380.0" layoutY="492.0" textFill="WHITE" />
+      <Label fx:id="lb44" layoutX="418.0" layoutY="492.0" textFill="WHITE" />
+      <Label fx:id="lb45" layoutX="458.0" layoutY="492.0" textFill="WHITE" />
+      <Label fx:id="lb46" layoutX="495.0" layoutY="492.0" textFill="WHITE" />
+      <Label fx:id="lb47" layoutX="534.0" layoutY="492.0" textFill="WHITE" />
+      <Label fx:id="lb48" layoutX="571.0" layoutY="492.0" textFill="WHITE" />
+      <Label fx:id="lb49" layoutX="610.0" layoutY="492.0" textFill="WHITE" />
       <Label fx:id="isFull" layoutX="384.0" layoutY="530.0" text="Your quickAccess bar is full!" textFill="RED" />
       <Button layoutX="215.0" layoutY="475.0" mnemonicParsing="false" onAction="#prev" opacity="0.0" prefHeight="46.0" prefWidth="45.0" text="Button" />
       <Label fx:id="sameType" layoutX="695.0" layoutY="399.0" text="The block has to be the same type!" textFill="RED">
