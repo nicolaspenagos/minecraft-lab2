@@ -23,7 +23,6 @@ public class Inventory {
 		
 		currentAmount = (int)(Math.random()*64)+1;
 		currentBlock = "block"+((int)(Math.random()*27));
-		System.out.println(currentBlock);
 	}
 	public boolean add(Cube c) {
 		return ht.add(c);
