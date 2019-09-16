@@ -1,7 +1,6 @@
 package modelTest;
 
 import static org.junit.Assert.assertTrue;
-import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 import model.Inventory;
@@ -22,7 +21,7 @@ class InventoryTest {
 	}
 	
 	@Test
-	void InventoryTest() {
+	public void inventoryTest() {
 		
 		setUpScenary1();
 		assertTrue("The constructor is not working porperly", inv != null);
