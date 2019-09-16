@@ -329,120 +329,120 @@ public class GUIController {
 				msg += line.charAt(i);
 				i++;
 			}
-
-			System.out.println(msg);
 			Cube c = new Cube(currentPath, msg);
-			System.out.println(inventary.getTable().add(c));
+			boolean addedProperly = inventary.getTable().add(c);
 			HashTable ht = inventary.getTable();
-
-			if (ht.getTable()[0] != null) {
-				imv0.setImage(new Image(ht.getTable()[0].getPath()));
-				lb0.setText(String.valueOf(ht.getCubesLength(0)));
+			if(addedProperly) {
+				if (ht.getTable()[0] != null) {
+					imv0.setImage(new Image(ht.getTable()[0].getPath()));
+					lb0.setText(String.valueOf(ht.getCubesLength(0)));
+				}
+				if (ht.getTable()[1] != null) {
+					imv1.setImage(new Image(ht.getTable()[1].getPath()));
+					lb1.setText(String.valueOf(ht.getCubesLength(1)));
+				}
+				if (ht.getTable()[2] != null) {
+					imv2.setImage(new Image(ht.getTable()[2].getPath()));
+					lb2.setText(String.valueOf(ht.getCubesLength(2)));
+				}
+				if (ht.getTable()[3] != null) {
+					imv3.setImage(new Image(ht.getTable()[3].getPath()));
+					lb3.setText(String.valueOf(ht.getCubesLength(3)));
+				}
+				if (ht.getTable()[4] != null) {
+					imv4.setImage(new Image(ht.getTable()[4].getPath()));
+					lb4.setText(String.valueOf(ht.getCubesLength(4)));
+				}
+				if (ht.getTable()[5] != null) {
+					imv5.setImage(new Image(ht.getTable()[5].getPath()));
+					lb5.setText(String.valueOf(ht.getCubesLength(5)));
+				}
+				if (ht.getTable()[6] != null) {
+					imv6.setImage(new Image(ht.getTable()[6].getPath()));
+					lb6.setText(String.valueOf(ht.getCubesLength(6)));
+				}
+				if (ht.getTable()[7] != null) {
+					imv7.setImage(new Image(ht.getTable()[7].getPath()));
+					lb7.setText(String.valueOf(ht.getCubesLength(7)));
+				}
+				if (ht.getTable()[8] != null) {
+					imv8.setImage(new Image(ht.getTable()[8].getPath()));
+					lb8.setText(String.valueOf(ht.getCubesLength(8)));
+				}
+				if (ht.getTable()[9] != null) {
+					imv9.setImage(new Image(ht.getTable()[9].getPath()));
+					lb9.setText(String.valueOf(ht.getCubesLength(9)));
+				}
+				if (ht.getTable()[10] != null) {
+					imv10.setImage(new Image(ht.getTable()[10].getPath()));
+					lb10.setText(String.valueOf(ht.getCubesLength(10)));
+				}
+				if (ht.getTable()[11] != null) {
+					imv11.setImage(new Image(ht.getTable()[11].getPath()));
+					lb11.setText(String.valueOf(ht.getCubesLength(11)));
+				}
+				if (ht.getTable()[12] != null) {
+					imv12.setImage(new Image(ht.getTable()[12].getPath()));
+					lb12.setText(String.valueOf(ht.getCubesLength(12)));
+				}
+				if (ht.getTable()[13] != null) {
+					imv13.setImage(new Image(ht.getTable()[13].getPath()));
+					lb13.setText(String.valueOf(ht.getCubesLength(13)));
+				}
+				if (ht.getTable()[14] != null) {
+					imv14.setImage(new Image(ht.getTable()[14].getPath()));
+					lb14.setText(String.valueOf(ht.getCubesLength(14)));
+				}
+				if (ht.getTable()[15] != null) {
+					imv15.setImage(new Image(ht.getTable()[15].getPath()));
+					lb15.setText(String.valueOf(ht.getCubesLength(15)));
+				}
+				if (ht.getTable()[16] != null) {
+					imv16.setImage(new Image(ht.getTable()[16].getPath()));
+					lb16.setText(String.valueOf(ht.getCubesLength(16)));
+				}
+				if (ht.getTable()[17] != null) {
+					imv17.setImage(new Image(ht.getTable()[17].getPath()));
+					lb17.setText(String.valueOf(ht.getCubesLength(17)));
+				}
+				if (ht.getTable()[18] != null) {
+					imv18.setImage(new Image(ht.getTable()[18].getPath()));
+					lb18.setText(String.valueOf(ht.getCubesLength(18)));
+				}
+				if (ht.getTable()[19] != null) {
+					imv19.setImage(new Image(ht.getTable()[19].getPath()));
+					lb19.setText(String.valueOf(ht.getCubesLength(19)));
+				}
+				if (ht.getTable()[20] != null) {
+					imv20.setImage(new Image(ht.getTable()[20].getPath()));
+					lb20.setText(String.valueOf(ht.getCubesLength(20)));
+				}
+				if (ht.getTable()[21] != null) {
+					imv21.setImage(new Image(ht.getTable()[21].getPath()));
+					lb21.setText(String.valueOf(ht.getCubesLength(21)));
+				}
+				if (ht.getTable()[22] != null) {
+					imv22.setImage(new Image(ht.getTable()[22].getPath()));
+					lb22.setText(String.valueOf(ht.getCubesLength(22)));
+				}
+				if (ht.getTable()[23] != null) {
+					imv23.setImage(new Image(ht.getTable()[23].getPath()));
+					lb23.setText(String.valueOf(ht.getCubesLength(23)));
+				}
+				if (ht.getTable()[24] != null) {
+					imv24.setImage(new Image(ht.getTable()[24].getPath()));
+					lb24.setText(String.valueOf(ht.getCubesLength(24)));
+				}
+				if (ht.getTable()[25] != null) {
+					imv25.setImage(new Image(ht.getTable()[25].getPath()));
+					lb25.setText(String.valueOf(ht.getCubesLength(25)));
+				}
+				if (ht.getTable()[26] != null) {
+					imv26.setImage(new Image(ht.getTable()[26].getPath()));
+					lb26.setText(String.valueOf(ht.getCubesLength(26)));
+				}
 			}
-			if (ht.getTable()[1] != null) {
-				imv1.setImage(new Image(ht.getTable()[1].getPath()));
-				lb1.setText(String.valueOf(ht.getCubesLength(1)));
-			}
-			if (ht.getTable()[2] != null) {
-				imv2.setImage(new Image(ht.getTable()[2].getPath()));
-				lb2.setText(String.valueOf(ht.getCubesLength(2)));
-			}
-			if (ht.getTable()[3] != null) {
-				imv3.setImage(new Image(ht.getTable()[3].getPath()));
-				lb3.setText(String.valueOf(ht.getCubesLength(3)));
-			}
-			if (ht.getTable()[4] != null) {
-				imv4.setImage(new Image(ht.getTable()[4].getPath()));
-				lb4.setText(String.valueOf(ht.getCubesLength(4)));
-			}
-			if (ht.getTable()[5] != null) {
-				imv5.setImage(new Image(ht.getTable()[5].getPath()));
-				lb5.setText(String.valueOf(ht.getCubesLength(5)));
-			}
-			if (ht.getTable()[6] != null) {
-				imv6.setImage(new Image(ht.getTable()[6].getPath()));
-				lb6.setText(String.valueOf(ht.getCubesLength(6)));
-			}
-			if (ht.getTable()[7] != null) {
-				imv7.setImage(new Image(ht.getTable()[7].getPath()));
-				lb7.setText(String.valueOf(ht.getCubesLength(7)));
-			}
-			if (ht.getTable()[8] != null) {
-				imv8.setImage(new Image(ht.getTable()[8].getPath()));
-				lb8.setText(String.valueOf(ht.getCubesLength(8)));
-			}
-			if (ht.getTable()[9] != null) {
-				imv9.setImage(new Image(ht.getTable()[9].getPath()));
-				lb9.setText(String.valueOf(ht.getCubesLength(9)));
-			}
-			if (ht.getTable()[10] != null) {
-				imv10.setImage(new Image(ht.getTable()[10].getPath()));
-				lb10.setText(String.valueOf(ht.getCubesLength(10)));
-			}
-			if (ht.getTable()[11] != null) {
-				imv11.setImage(new Image(ht.getTable()[11].getPath()));
-				lb11.setText(String.valueOf(ht.getCubesLength(11)));
-			}
-			if (ht.getTable()[12] != null) {
-				imv12.setImage(new Image(ht.getTable()[12].getPath()));
-				lb12.setText(String.valueOf(ht.getCubesLength(12)));
-			}
-			if (ht.getTable()[13] != null) {
-				imv13.setImage(new Image(ht.getTable()[13].getPath()));
-				lb13.setText(String.valueOf(ht.getCubesLength(13)));
-			}
-			if (ht.getTable()[14] != null) {
-				imv14.setImage(new Image(ht.getTable()[14].getPath()));
-				lb14.setText(String.valueOf(ht.getCubesLength(14)));
-			}
-			if (ht.getTable()[15] != null) {
-				imv15.setImage(new Image(ht.getTable()[15].getPath()));
-				lb15.setText(String.valueOf(ht.getCubesLength(15)));
-			}
-			if (ht.getTable()[16] != null) {
-				imv16.setImage(new Image(ht.getTable()[16].getPath()));
-				lb16.setText(String.valueOf(ht.getCubesLength(16)));
-			}
-			if (ht.getTable()[17] != null) {
-				imv17.setImage(new Image(ht.getTable()[17].getPath()));
-				lb17.setText(String.valueOf(ht.getCubesLength(17)));
-			}
-			if (ht.getTable()[18] != null) {
-				imv18.setImage(new Image(ht.getTable()[18].getPath()));
-				lb18.setText(String.valueOf(ht.getCubesLength(18)));
-			}
-			if (ht.getTable()[19] != null) {
-				imv19.setImage(new Image(ht.getTable()[19].getPath()));
-				lb19.setText(String.valueOf(ht.getCubesLength(19)));
-			}
-			if (ht.getTable()[20] != null) {
-				imv20.setImage(new Image(ht.getTable()[20].getPath()));
-				lb20.setText(String.valueOf(ht.getCubesLength(20)));
-			}
-			if (ht.getTable()[21] != null) {
-				imv21.setImage(new Image(ht.getTable()[21].getPath()));
-				lb21.setText(String.valueOf(ht.getCubesLength(21)));
-			}
-			if (ht.getTable()[22] != null) {
-				imv22.setImage(new Image(ht.getTable()[22].getPath()));
-				lb22.setText(String.valueOf(ht.getCubesLength(22)));
-			}
-			if (ht.getTable()[23] != null) {
-				imv23.setImage(new Image(ht.getTable()[23].getPath()));
-				lb23.setText(String.valueOf(ht.getCubesLength(23)));
-			}
-			if (ht.getTable()[24] != null) {
-				imv24.setImage(new Image(ht.getTable()[24].getPath()));
-				lb24.setText(String.valueOf(ht.getCubesLength(24)));
-			}
-			if (ht.getTable()[25] != null) {
-				imv25.setImage(new Image(ht.getTable()[25].getPath()));
-				lb25.setText(String.valueOf(ht.getCubesLength(25)));
-			}
-			if (ht.getTable()[26] != null) {
-				imv26.setImage(new Image(ht.getTable()[26].getPath()));
-				lb26.setText(String.valueOf(ht.getCubesLength(26)));
-			}
+			
 		} else {
 
 			String[] parts = currentPath.split("/");
@@ -455,7 +455,6 @@ public class GUIController {
 				i++;
 			}
 			Cube c = new Cube(currentPath, msg);
-			System.out.println(quickAccess.isNull(currentQuickAccess));
 			if(quickAccess.isNull(currentQuickAccess)){
 				 quickAccess.add(c, currentQuickAccess, Integer.parseInt(amount.getText()));
 			}else {
@@ -583,7 +582,6 @@ public class GUIController {
 	
 	public void update() {
 	    int numberOfImages = quickAccess.numberOfImages(currentQuickAccess);
-	    System.out.println("HumberOfImages"+numberOfImages);
 	    int size = quickAccess.residue(currentQuickAccess);
 	    
 	    if(numberOfImages==0) {
