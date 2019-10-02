@@ -14,7 +14,6 @@ public class HashTable implements HashTableI {
 	@Override
 	public boolean add(Cube c) {
 		boolean could = true;
-		int counter = 1;
 		int pos = hash(c.getKey());
 		if(table[pos] == null) {
 			table[pos] = c;	
@@ -22,7 +21,7 @@ public class HashTable implements HashTableI {
 		else if(getCubesLength(pos) < 64) {
 			boolean added = false;
 			Cube actual = 	table[pos]; 
-			while(!added && counter < 64) {
+			while(!added) {
 				if(actual.getNext() == null) {
 					actual.setNext(c);
 					added = true;
